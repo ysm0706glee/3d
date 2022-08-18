@@ -7,14 +7,9 @@ export const Iphone = (props) => {
     props.setInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("input: ", props.input);
-  };
-
   return (
     <group {...props} dispose={null}>
-      <group position={[0, 1.93, 0]}>
+      <group position={[-0.5, 1, 1.7]}>
         <mesh
           castShadow
           receiveShadow
@@ -185,9 +180,8 @@ export const Iphone = (props) => {
           material={materials["Display.002"]}
         >
           <Html distanceFactor={2} position={[0, 1, 0]} transform>
-            <form onSubmit={handleSubmit}>
+            <form>
               <input type="text" value={props.input} onChange={handleChange} />
-              <button>Send</button>
             </form>
           </Html>
         </mesh>

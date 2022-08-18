@@ -1,9 +1,4 @@
-import {
-  EffectComposer,
-  Bloom,
-  Pixelation,
-  Noise,
-} from "@react-three/postprocessing";
+import { EffectComposer, Bloom, Noise } from "@react-three/postprocessing";
 import { useControls } from "leva";
 
 export const Effects = () => {
@@ -22,7 +17,6 @@ export const Effects = () => {
   return (
     <EffectComposer>
       <Bloom {...bloomProps} />
-      {/* <Pixelation granularity={20} /> */}
       <Noise {...noiseProps} />
     </EffectComposer>
   );

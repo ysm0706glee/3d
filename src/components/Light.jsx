@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { useControls } from "leva";
 import { a, useSpring } from "@react-spring/three";
+import { useControls } from "leva";
 
 export const Light = (props) => {
   const spot = useRef();
@@ -20,7 +20,7 @@ export const Light = (props) => {
       <a.spotLight
         ref={spot}
         color="#fff"
-        position={[0, 5, 3]}
+        position={[7, 3, 6]}
         decay={0}
         angle={Math.PI * 0.15}
         distance={10}
