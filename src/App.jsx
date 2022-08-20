@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { Leva } from "leva";
 import "./App.css";
 import { Light } from "./components/Light";
@@ -11,6 +11,7 @@ import { Camera } from "./components/Camera";
 
 const App = () => {
   const [light, setLight] = useState(true);
+  console.log("light: ", light);
   const [input, setInput] = useState("");
 
   return (
@@ -36,13 +37,13 @@ const App = () => {
         />
 
         <Effects />
-        {/* <OrbitControls /> */}
+        {/* <OrbitContr÷ols /> */}
       </Canvas>
 
       <Leva collapsed />
 
       <button style={{ position: "fixed" }} onClick={() => setLight(!light)}>
-        Lights {light ? "on" : "off"}
+        Light {light ? "on" : "off"}
       </button>
     </div>
   );

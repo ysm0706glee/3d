@@ -39,7 +39,10 @@ export const Person = (props) => {
     <>
       <a.meshStandardMaterial
         ref={setMatrial}
-        roughness={0}
+        metalness={0.5}
+        metallnessMap={metallic}
+        normalMap={normal}
+        roughness={0.5}
         roughnessMap={roughness}
         {...springProps}
       />
